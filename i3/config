@@ -5,19 +5,7 @@
 # this file and re-run i3-config-wizard(1).
 #
 
-set $fm eDP-1
-set $sm DP-1-1-5
-
-bindsym $mod+n exec --no-startup-id newMonitor.sh
-bindsym $mod+m exec --no-startup-id myMonitor.sh
-
-exec --no-startup-id dockd --daemon
-
 exec --no-startup-id pulseaudio
-
-exec_always --no-startup-id dunst -config ~/.config/dunst/dunstrc
-
-exec --no-startup-id $HOME/i3-alternating-layout/alternating_layouts.py
 
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
@@ -79,7 +67,7 @@ floating_modifier $mod
 
 # Floating size
 
-floating_minimum_size 1920 x 1080
+floating_minimum_size 64 x 36
 floating_maximum_size 1920 x 1080
 
 # move tiling windows via drag & drop by left-clicking into the title bar,
@@ -232,5 +220,3 @@ bindsym $mod+r mode "resize"
 bindcode --release 133 exec "rofi -show drun";
 
 # Rofi power menu
-
-bindsym $mod+p exec "rofi -show power-menu -modi power-menu:./rofi-power-menu/rofi-power-menu";

@@ -1,0 +1,129 @@
+* {
+    background: #24273a;
+    sky: #91d7e3;
+    foreground: #cad3f5;
+    selected-background: #363a4f;
+    red: #ed8796;
+    green: #a6da95;
+    almost-background: #494d64;
+}
+
+
+configuration{
+    modi: "run,drun,window";
+    icon-theme: "candy-icons";
+    terminal: "alacritty";
+    show-icons: false;
+    drun-display-format: "{icon} {name}";
+    location: 0;
+    disable-history: false;
+    hide-scrollbar: true;
+    display-drun: "Apps ";
+    display-run: " Run ";
+    display-window: "Window";
+    display-Network: "Network";
+    sidebar-mode: true;
+    dpi: 192;
+    font: "Iosevka 12";
+}
+
+window {
+    background-color: @background;
+    text-color: @foreground;
+    width: 40%;
+    height: 40%;
+    border: 2px;
+    border-color: @sky;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+textbox {
+    text-color: @foreground;
+}
+
+inputbar {
+    text-color: @foreground;
+    padding: 10px;
+}
+
+num-filtered-rows {
+    text-color: @almost-background;
+}
+
+num-rows {
+    text-color: @almost-background;
+}
+
+entry {
+    text-color: @foreground;
+    placeholder: "Search apps or windows or scripts";
+    placeholder-color: @almost-background;
+}
+
+listview {
+    scrollbar: false;
+    padding: 25px;
+    columns: 2;
+    border: 0px 0px 0px 0px solid;
+}
+
+element {
+    padding: 10px;
+}
+
+element-text {
+    background-color: @background;
+}
+
+element.normal.normal {
+    background-color: @background;
+}
+
+element.selected.normal {
+    background-color: @background;
+    border: 2px;
+    border-radius: 5px;
+    border-color: @sky;
+    text-color: @sky;
+}
+
+element.normal.active {
+    background-color: @background;
+    border: 2px;
+    border-radius: 5px;
+    border-color: @green;
+    text-color: @green;
+}
+
+element.selected.active {
+    background-color: @background;
+    border: 2px;
+    border-radius: 5px;
+    border-color: @green;
+    text-color: @green;
+}
+
+element.alternate.normal {
+    background-color: @background;
+}
+
+prompt {
+    text-color: @foreground;
+}
+
+mode-switcher {
+    background-color: @background;
+}
+
+button {
+    padding: 10px;
+    text-color: @foreground;
+    background-color: @background;
+}
+
+button.selected {
+    background-color: @foreground;
+    text-color: @background;
+}
+
